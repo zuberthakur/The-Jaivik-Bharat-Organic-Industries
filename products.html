@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - The Jaivik Bharat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+}
+
+/* HEADER */
+header{
+    background:#1b5e20;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    padding:25px;
+    font-size:28px;
+    color:#1b5e20;
+    font-weight:600;
+}
+
+/* GRID */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+    padding:20px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.card h3{
+    color:#2e7d32;
+    margin-bottom:5px;
+}
+
+.card p{
+    font-size:14px;
+    color:#333;
+    margin:5px 0;
+}
+
+.btn{
+    margin-top:10px;
+    padding:8px 15px;
+    border:none;
+    background:#2e7d32;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#00c853;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    background:#25D366;
+    color:white;
+    padding:14px;
+    border-radius:50%;
+    cursor:pointer;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+    70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#1b5e20;
+    color:white;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>🌿 The Jaivik Bharat</h2>
+    <a href="index.html">🏠 Home</a>
+</header>
+
+<div class="title">🌾 Our Premium Products</div>
+
+<div class="container">
+
+    <!-- 1 -->
+    <div class="card">
+        <img src="gold.jpg.jpeg"  alt="Gold Vardak Fertilizer">
+        <div class="card-content">
+            <h3>Gold Vardak</h3>
+            <p>⚖ Weight: 50 Kg</p>
+            <p>🌿 12 ingredients mixed fertilizer for all crops</p>
+            <button class="btn" onclick="order('Gold Vardak')">Order Now</button>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="card">
+        <img src="zinc.jpg.jpeg" alt="Mono Zinc Product">
+        <div class="card-content">
+            <h3>Mono Zinc</h3>
+            <p>⚖ Weight: 5 Kg</p>
+            <p>🌱 Plant ke andar zinc ki kami door karta hai</p>
+            <button class="btn" onclick="order('Mono Zinc')">Order Now</button>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="card">
+        <img src="sulphur.jpg.jpeg" alt="Sulphur Product">
+        <div class="card-content">
+            <h3>Sulphur 90% WDG</h3>
+            <p>⚖ Weight: 3 Kg</p>
+            <p>🛡️ Fasal protection aur growth ke liye</p>
+            <button class="btn" onclick="order('Sulphur 90% WDG')">Order Now</button>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="card">
+        <img src="hunter.jpg.jpeg" alt="Hunter GR Liquid">
+        <div class="card-content">
+            <h3>Hunter GR (Liquid)</h3>
+            <p>⚖ Bottle Packing</p>
+            <p>💧 Liquid crop protection solution</p>
+            <button class="btn" onclick="order('Hunter GR')">Order Now</button>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="card">
+        <img src="zym.jpg.jpeg" alt="Zym Balti">
+        <div class="card-content">
+            <h3>Zym Balti</h3>
+            <p>⚖ Weight: 10 Kg</p>
+            <p>🌱 Soil fertility aur growth booster</p>
+            <button class="btn" onclick="order('Zym Balti')">Order Now</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- WHATSAPP 2 BUTTONS -->
+<div style="position:fixed; bottom:20px; right:20px; display:flex; flex-direction:column; gap:10px;">
+    
+    <div class="whatsapp" onclick="window.open('https://wa.me/919456444421','_blank')">
+        💬1
+    </div>
+
+    <div class="whatsapp" onclick="window.open('https://wa.me/919456444423','_blank')">
+        💬2
+    </div>
+
+</div>
+
+<footer>
+📞 +91-9456444421 | +91-9456444423 | Email: thejaivikbharatorganic@gmail.com
+</footer>
+
+<script>
+function order(product){
+    let choice = confirm("Sales ke liye OK dabaye\nSupport ke liye Cancel dabaye");
+
+    if(choice){
+        window.open("https://wa.me/919456444421?text=I want to order " + product,"_blank");
+    } else {
+        window.open("https://wa.me/919456444423?text=I want to order " + product,"_blank");
+    }
+}
+</script>
+
+</body>
+</html>

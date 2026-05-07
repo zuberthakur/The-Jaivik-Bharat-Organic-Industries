@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - The Jaivik Bharat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+color:#1b5e20;
+}
+
+/* NAVBAR */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(0,100,0,0.9);
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:0 12px;
+text-decoration:none;
+position:relative;
+}
+
+nav a::after{
+content:"";
+width:0%;
+height:2px;
+background:#00ff99;
+position:absolute;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* CONTACT */
+.contact{
+padding:60px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+}
+
+/* CARD */
+.card{
+width:320px;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(8px);
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+animation:fade 1.2s ease;
+}
+
+.card h2{
+margin-bottom:15px;
+color:#1b5e20;
+}
+
+.card p{
+margin:8px 0;
+font-size:15px;
+}
+
+/* BUTTON */
+.btn{
+margin-top:12px;
+padding:10px 18px;
+border:none;
+background:#2e7d32;
+color:white;
+border-radius:20px;
+cursor:pointer;
+transition:0.3s;
+width:100%;
+}
+
+.btn:hover{
+background:#00c853;
+transform:scale(1.05);
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+background:#25D366;
+color:white;
+padding:14px;
+border-radius:50%;
+cursor:pointer;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#1b5e20;
+color:white;
+margin-top:40px;
+}
+
+/* ANIMATION */
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>🌿 THE JAIVIK BHARAT</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<!-- CONTACT -->
+<section class="contact">
+<div class="card">
+
+<h2>📞 Contact Us</h2>
+
+<p><strong>Phone:</strong> +91-9456444421 , +91-9456444423</p>
+
+<p><strong>WhatsApp:</strong> Choose number below 👇</p>
+
+<button class="btn" onclick="wa1()">
+💬 WhatsApp (9456444421)
+</button>
+
+<button class="btn" onclick="wa2()">
+💬 WhatsApp (9456444423)
+</button>
+
+<p><strong>Email:</strong> 
+<a href="mailto:thejaivikbharatorganic@gmail.com">
+thejaivikbharatorganic@gmail.com
+</a>
+</p>
+
+<p><strong>📍 Address:</strong><br>
+Mini Bypass Road, Saharanpur, Uttar Pradesh, India
+</p>
+
+</div>
+</section>
+
+<!-- FLOAT WHATSAPP (2 BUTTONS) -->
+<div style="position:fixed; bottom:20px; right:20px; display:flex; flex-direction:column; gap:10px;">
+    
+    <div class="whatsapp" onclick="wa1()">💬1</div>
+    <div class="whatsapp" onclick="wa2()">💬2</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+📞 +91-9456444421 | +91-9456444423 | Email: thejaivikbharatorganic@gmail.com
+</footer>
+
+<script>
+function wa1(){
+window.open("https://wa.me/919456444421","_blank");
+}
+
+function wa2(){
+window.open("https://wa.me/919456444423","_blank");
+}
+</script>
+
+</body>
+</html>
